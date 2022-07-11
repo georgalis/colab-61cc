@@ -1,5 +1,4 @@
 # Tint
-cargo build --release # to build (macOS/darwin version included)
 Rust binary will use colors to indicate progress on output listings, faster then the included python version.
 
 shell code use colors to indicate progress on output listings.
@@ -23,4 +22,12 @@ Some shell script to generate this example is in `fn.bash` too.
 A translation for the `color_dark` function could
 make the colors useful, anytime you want to display progress while printing output...
 
+Rust build examples
+cargo build
+cargo build --release
 
+Swift build example from the tint dir (docker linux)
+docker pull swift
+docker run -it --rm -v $(pwd)/src:/src swift
+swiftc ./src/*.swift -o ./tint
+./tint -w 500

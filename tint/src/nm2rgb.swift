@@ -32,7 +32,7 @@ func calcWavelength() {
 
 func nm2rgb(wavelength: Double, gamma: Double = 0.62) -> Array<String> {
     //print("nm2rgb wavelength:" + String(wavelength) )
-    var r = 0.0;
+    var R = 0.0;
     var G = 0.0;
     var B = 0.0;
     
@@ -40,7 +40,7 @@ func nm2rgb(wavelength: Double, gamma: Double = 0.62) -> Array<String> {
         let attenuation = 0.3 + 0.7 * (wavelength - 380.0) / (440.0 - 380.0);
             //print("attenuation:\(attenuation)");
         let rc = (-(wavelength - 440) / (440 - 380)) * attenuation
-        r = pow(Double(rc),gamma)
+        R = pow(Double(rc),gamma)
         B = pow((1.0 * attenuation), gamma);
     } else if wavelength >= 440.0 && wavelength <= 490.0 {
         G = pow(((wavelength - 440.0) / (490.0 - 440.0)), gamma);
@@ -49,14 +49,14 @@ func nm2rgb(wavelength: Double, gamma: Double = 0.62) -> Array<String> {
         G = 1.0;
         B = pow((-(wavelength - 510.0) / (510.0 - 490.0)), gamma);
     } else if wavelength >= 510.0 && wavelength <= 580.0 {
-        r = pow(((wavelength - 510.0) / (580.0 - 510.0)), gamma);
+        R = pow(((wavelength - 510.0) / (580.0 - 510.0)), gamma);
         G = 1.0;
     } else if wavelength >= 580.0 && wavelength <= 645.0 {
-        r = 1.0;
+        R = 1.0;
         G = pow((-(wavelength - 645.0) / (645.0 - 580.0)), gamma);
     } else if wavelength >= 645.0 && wavelength <= 794.5 {
         let attenuation = 0.3 + 0.7 * (750.0 - wavelength) / (750.0 - 645.0);
-        r = pow((1.0 * attenuation), gamma);
+        R = pow((1.0 * attenuation), gamma);
     }
     
     R=round(R*255)

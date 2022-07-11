@@ -6,8 +6,7 @@
 //import Foundation
 var gamma = 0.62
 //print("Start")
-let arguments = CommandLine.arguments //Array of strings
-
+let arguments = CommandLine.arguments 
 func help() {
     print("usage: tint -w <wavelength> ");
     print("   or: tint -n <numerator> -d <denominator> ");
