@@ -1,6 +1,8 @@
 // mod nm2rgb;
+use std::collections::HashMap;
 
-/*This converts a given wavelength of light to an 
+/*
+This converts a given wavelength of light to an 
 approximate RGB color value. The wavelength must be given
 in nanometers in the range from 380 nm through 750 nm
 (789 THz through 400 THz).
@@ -12,7 +14,7 @@ http://www.noah.org/wiki/Wavelength_to_RGB_in_Python
 http://www.noah.org/wiki/canvas.py
 */
 
-pub fn nm2rgb(wavelength: f32) {
+pub fn nm2rgb(rgb: &mut HashMap<&str, f32>, wavelength: f32) {
     //nm2rgb::nm2rgb(wavelength);
     let gamma=0.62;
     let mut R = 0.0;
@@ -44,6 +46,5 @@ pub fn nm2rgb(wavelength: f32) {
     G=(G*255.0).round();
     B=(B*255.0).round();
 
-    println!("{} {} {} {}", R,G,B,wavelength);
 }
 

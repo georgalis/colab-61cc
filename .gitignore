@@ -1,0 +1,10 @@
+.stscreds
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+**/.terraform
+**/terraform.tfstate.backup
+**/node_modules
+node_modules
+**/tint/target
