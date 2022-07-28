@@ -7,4 +7,5 @@
 **/terraform.tfstate.backup
 **/node_modules
 node_modules
-**/tint/target
+**/tint/src/rust/target
+**/tint/src/rust/Cargo.lock
