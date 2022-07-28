@@ -23,11 +23,11 @@ A translation for the `color_dark` function could
 make the colors useful, anytime you want to display progress while printing output...
 
 Rust build examples
-`cargo build;`
+`cd src/rust; cargo build;`
 `cargo build --release;`
 
 Swift build example from the tint dir (docker linux)
-`docker pull swift;`
+`docker pull swift; cd src/swift`
 `docker run -it --rm -v $(pwd)/src:/src swift;`
 `swiftc ./src/*.swift -o ./tint;`
 `./tint -w 500;`
