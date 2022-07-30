@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+python -V || { echo "python required."; exit 1; }
 
 color_dark () { # numerator (arg1) and denominator (arg2) of a number 0<x<1
     # for tuned (dimmed) rgb color codes, of reversed 400-800nm color spectrum...
@@ -20,4 +21,3 @@ for d in 3 29 ; do
         done # n
     echo
     done # e
-
